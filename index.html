@@ -27,20 +27,21 @@
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
 	</head>
-	<body class="landing">
+	<body class="landing" id="top">
 
 		<!-- Header -->
 			<header id="header" class="alt">
 				<h1><a href="index.html">Programmering</a> på IT-Gymnasiet Göteborg</h1>
 				<nav id="nav">
 					<ul>
-						<!--<li><a href="index.html">Hem</a></li>
+						<li><a href="#top" class="scroll">Hem</a></li>
 						<li>
 							<a href="" class="icon fa-angle-down">Projekt</a>
 							<ul>
-								<li><a href="182-easy.html">Utmaning #182 [Lätt]</a></li>
+								<li><a href="#182latt" class="scroll">Utmaning #182 [Lätt]</a></li>
+                                <li><a href="#183latt" class="scroll">Utmaning #183 [Lätt]</a></li>
 							</ul>
-						</li>-->
+						</li>
 						<li><a href="https://www.facebook.com/ITGGotProgrammering" target="_blank" class="button"><i class="fa fa-facebook"></i></a></li>
 					</ul>
 				</nav>
@@ -95,8 +96,38 @@
 						</section>
 					</div>-->
 				</section>
-					
-				<!--<div class="row">
+				
+                <div class="row">
+					<div class="6u" id="182latt">
+
+						<section class="box special">
+							<span class="image featured"><img src="images/pic02.jpg" alt="" /></span>
+							<h3>Utmaning #182 [Lätt]</h3>
+							<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt"><span class="icon fa-reddit"></span></a></li>
+							</ul>
+						</section>
+						
+					</div>
+					<div class="6u" id="183latt">
+
+						<section class="box special">
+							<span class="image featured"><img src="images/pic03.jpg" alt="" /></span>
+							<h3>Utmaning #183 [Lätt]</h3>
+							<p>Integer volutpat ante et accumsan commophasellus sed aliquam feugiat lorem aliquet ut enim rutrum phasellus iaculis accumsan dolore magna aliquam veroeros.</p>
+							<ul class="actions">
+								<li><a href="#" class="button alt"><span class="icon fa-reddit"></span></a></li>
+							</ul>
+						</section>
+
+					</div>
+				</div>
+
+			</section>
+                
+				<!--Template section
+                    <div class="row">
 					<div class="6u">
 
 						<section class="box special">
@@ -123,9 +154,9 @@
 					</div>
 				</div>
 
-			</section>
+			</section>-->
 			
-		    <section id="cta">
+		    <!--<section id="cta">
 				
 				<h2>Sign up for beta access</h2>
 				<p>Blandit varius ut praesent nascetur eu penatibus nisi risus faucibus nunc.</p>
@@ -148,11 +179,20 @@
 				<ul class="icons">
 					<li><a href="https://www.facebook.com/ITGGotProgrammering" class="icon fa-facebook" target="_blank"><span class="label">Facebook</span></a></li>
 					<li><a href="https://github.com/itggoteborg" class="icon fa-github" target="_blank"><span class="label">Github</span></a></li>
+                    <li><a href="https://reddit.com/r/dailyprogrammer" class="icon fa-reddit" target="_blank"><span class="label">Reddit</span></a></li>
 				</ul>
 				<ul class="copyright">
 					<li>&copy; IT-Gymnasiet 2014. All rights reserved.</li><li>Design: <a href="http://html5up.net" target="_blank">HTML5 UP</a></li>
 				</ul>
 			</footer>
+        <script>
+            jQuery(document).ready(function($) {
 
+                $(".scroll").click(function(event){
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop:$(this.hash).offset().top}, 500);
+                });
+            });
+		</script>
 	</body>
 </html>
