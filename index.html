@@ -14,6 +14,11 @@
         	<link rel="shortcut icon" href="images/icon.png" type="image/png">
         	<link rel="alternate" href="http://example.com/en-ie" hreflang="sv" />
 		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script>
+    			if (location.protocol !== 'https:') {
+        			document.write("<meta http-equiv='refresh' content='0; https://itggoteborg.github.io'>");
+    			}
+		</script>
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery.dropotron.min.js"></script>
 		<script src="js/jquery.scrollgress.min.js"></script>
