@@ -18,7 +18,7 @@ $(document).ready(function() {
       */
     if(isNaN(tillfalle)) {
       tillfalle = new Date();
-      tillfalle.setDate(tillfalle.getDate() + (3 - 1 - tillfalle.getDay() + 7) % 7 + 1);
+      tillfalle.setDate(tillfalle.getDate() + (3 - tillfalle.getDay() + 7) % 7);
       tillfalle.setHours(15);
       tillfalle.setMinutes(0);
     }
