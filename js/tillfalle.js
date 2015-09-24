@@ -22,7 +22,7 @@ $(document).ready(function() {
       tillfalle.setHours(15);
       tillfalle.setMinutes(0);
     }
-
+  
     /**
       * Skriv det resulterande datumet till elementet med ID 'tillfalle' i formattet
       * d F Y H:i, ex. 16 September 2015 15:00
@@ -30,5 +30,33 @@ $(document).ready(function() {
     var m = ['Januari','Februari','Mars','April','Maj','Juni','Juli',
 'Augusti','September','Oktober','November','December'];
     $('#tillfalle').html(tillfalle.getDate() + ' ' + m[tillfalle.getMonth()] + ' ' + tillfalle.getFullYear() + ' ' + ('00'+tillfalle.getHours()).slice(-2) + ':' + ('00'+tillfalle.getMinutes()).slice(-2));
+
+    /**
+      * Räkna ner tiden tills tillfalle inträffar.
+      */
+    visning = document.querySelector('#tid')
+    if((tillfalle.getTime()-Date.now())<=0) {
+      visning.innerHTML = '<strong>PÅGÅR JUST NU</strong> till 17:00';
+    }else {
+      var tidtagare = new CountDownTimer((tillfalle-Date.now())/1000);
+      tidtagare.onTick(format).onTick(function() {
+        if(this.expired()) {
+          visning.innerHTML = '<strong>PÅGÅR JUST NU</strong> till 17:00';   
+        }
+      }).start();
+    }
   });
+
+  /**
+    * tid till tillfälle
+    * NOTERA: detta är inte korrekt, om ett dygn exempelvis har mer än 86400 sekunder
+    * någon dag blir saker jobbigt!
+    */
+  function format(ttt) {
+    var days = ((ttt / 86400) | 0);
+    var hours = ((ttt / 3600) | 0) % 24;
+    var minutes = ((ttt / 60) | 0) % 60;
+    var seconds = ((ttt % 60) | 0);
+    visning.innerHTML = days + ' dagar, ' + ('00'+hours).slice(-2) + ':' + ('00'+minutes).slice(-2) + ':' + ('00'+seconds).slice(-2) + ' timmar';
+  }
 });
