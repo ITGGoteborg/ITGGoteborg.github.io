@@ -13,8 +13,8 @@ $(document).ready(function() {
   }).done(function() {
 
     /**
-      * Om TILLFALLE var tom eller inte kunde läsas, sätt tillfalle till nästa onsdag
-      * klockan tre.
+      * Om TILLFALLE var tom eller inte kunde läsas, sätt tillfalle till närmaste onsdag
+      * klockan tre, om klockan passerat fem sätts tillfalle till onsdag nästkommande vecka.
       */
     if(isNaN(tillfalle)) {
       tillfalle = new Date();
