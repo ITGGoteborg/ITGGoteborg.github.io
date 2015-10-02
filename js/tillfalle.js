@@ -22,6 +22,7 @@ $(document).ready(function() {
       tillfalle.setDate(tillfalle.getDate()+((tillfalle.getHours() < 17) ? ((3-tillfalle.getDay()+7)%7) : ((3-1-tillfalle.getDay()+7)%7+1)));
       tillfalle.setHours(15);
       tillfalle.setMinutes(0);
+      tillfalle.setSeconds(0);
     }
   
     /**
