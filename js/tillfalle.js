@@ -23,6 +23,7 @@ $(document).ready(function() {
       tillfalle.setHours(15);
       tillfalle.setMinutes(0);
       tillfalle.setSeconds(0);
+      tillfalle.setMilliseconds(0);
     }
   
     /**
