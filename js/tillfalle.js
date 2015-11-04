@@ -16,7 +16,7 @@ $(document).ready(function() {
       * Om TILLFALLE var tom eller inte kunde läsas, sätt tillfalle till närmaste onsdag
       * klockan tre, om klockan passerat fem sätts tillfalle till onsdag nästkommande vecka.
       */
-    if(isNaN(tillfalle)) {
+    if(isNaN(tillfalle) || (tillfalle.getTime()-Date.now())<=7200000) {
       tillfalle = new Date();
       //tillfalle.setTime(tillfalle.getTime() + (259200000 - (86400000*tillfalle.getDay()) + 604800000) % 604800000);
       tillfalle.setDate(tillfalle.getDate()+((tillfalle.getHours() < 17) ? ((3-tillfalle.getDay()+7)%7) : ((3-1-tillfalle.getDay()+7)%7+1)));
