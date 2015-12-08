@@ -1,7 +1,0 @@
-<?xml version="1.0" ?>
-<?xml-stylesheet type="text/css" href="https://fonts.googleapis.com/css?family=Roboto"?>
-<svg height="256" version="1.1" width="576" xmlns="http://www.w3.org/2000/svg" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <rect x="0" y="0" width="576" height="256" style="fill: #27ae60;" />
-        <text x="50" y="100" style="fill: #fff; font-family: 'Roboto', sans-serif; font-size: 40;">Utmaning</text>
-        <text x="50" y="150" style="fill: #fff; font-family: 'Roboto', sans-serif; font-size: 36;">#183 [Lätt]</text>
-</svg>
