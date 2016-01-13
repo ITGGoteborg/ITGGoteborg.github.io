@@ -1,0 +1,22 @@
+{
+    "default": {
+        "start": {
+            "day": "wednesday",
+            "time": "15:00"
+        },
+        "end": {
+            "day": "wednesday",
+            "time": "17:00"
+        }
+    },
+    "custom": {
+        "start": {
+            "date": "2016-01-13",
+            "time": "14:15"
+        },
+        "end": {
+            "date": "2016-01-13",
+            "time": "17:00"
+        }
+    }
+}
