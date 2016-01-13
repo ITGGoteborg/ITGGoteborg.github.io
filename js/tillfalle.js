@@ -36,7 +36,7 @@ $(document).ready(function() {
      * relativt till denna javascript fil.
      */
     $.ajax({
-        url: "../tillfalle.json",
+        url: "../tillfalle",
         success: function(json) {
             data = $.parseJSON(json);
         }
