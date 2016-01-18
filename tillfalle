@@ -1,11 +1,11 @@
 {
     "default": {
         "start": {
-            "day": "wednesday",
+            "day": "3",
             "time": "15:00"
         },
         "end": {
-            "day": "wednesday",
+            "day": "3",
             "time": "17:00"
         }
     },
