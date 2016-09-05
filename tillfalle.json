@@ -1,0 +1,13 @@
+{
+	"default": {
+		"start": {
+			"day": 3,
+			"hour": "15",
+			"minute": "00"
+		},
+		"end": {
+			"hour": "17",
+			"minute": "00"
+		}
+	}
+}

@@ -1344,6 +1344,7 @@
 
 			#footer .copyright a {
 				color: inherit;
+				display: inline-block;
 			}
 
 			#footer .copyright li {
